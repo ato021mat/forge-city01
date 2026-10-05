@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>دانلود اسپرایت و صدا – Forge City</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+      line-height: 1.9;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin: 0;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+    h1 {
+      font-size: 1.5rem;
+      color: #22d3ee;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      color: #fbbf24;
+      margin-top: 32px;
+    }
+    p, li { color: #cbd5e1; margin: 8px 0; }
+    ol, ul { padding-right: 22px; }
+    .box {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+    .box.green { border-color: #166534; background: #14532d33; }
+    a { color: #38bdf8; }
+    code {
+      background: #334155;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      direction: ltr;
+      display: inline-block;
+    }
+    .note { color: #94a3b8; font-size: 0.95rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #334155;
+      padding: 10px 12px;
+      text-align: right;
+    }
+    th { background: #1e293b; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>دانلود اسپرایت پیکسل، صدا و تایل‌مپ</h1>
+    <p class="note">بازی بدون این فایل‌ها هم کار می‌کند. این‌ها فقط ظاهر و صدا را بهتر می‌کنند. همه رایگان‌اند.</p>
+
+    <div class="box green">
+      هیچ برنامه‌ای نصب نکن. فقط از مرورگر دانلود کن و فایل‌ها را در GitHub داخل پوشه بازی آپلود کن.
+    </div>
+
+    <h2>۱) تایل و تصویر شهر (اسپرایت پیکسل)</h2>
+    <p>یکی از این سایت‌ها را باز کن و فایل رایگان را دانلود کن:</p>
+    <ul>
+      <li><a href="https://kenney.nl/assets/rpg-urban-pack" target="_blank" rel="noopener">Kenney – RPG Urban Pack</a> (کاملاً رایگان و آزاد)</li>
+      <li><a href="https://kenney.nl/assets" target="_blank" rel="noopener">سایر پک‌های Kenney</a></li>
+      <li><a href="https://gandalfhardcore.itch.io/free-pixel-art-sidescroller-asset-pack-32x32-city" target="_blank" rel="noopener">پک شهر ۳۲×۳۲ در itch.io</a></li>
+    </ul>
+    <p>بعد از دانلود و باز کردن زیپ، عکس‌های PNG را در گیت‌هاب اینجا بگذار:</p>
+    <p><code>public/sprites/tiles/</code></p>
+    <p>اگر بتوانی اسم فایل‌ها را نزدیک این‌ها بگذاری بهتر است:</p>
+    <table>
+      <tr><th>اسم پیشنهادی</th><th>موضوع</th></tr>
+      <tr><td><code>grass.png</code></td><td>چمن</td></tr>
+      <tr><td><code>road.png</code></td><td>جاده</td></tr>
+      <tr><td><code>sidewalk.png</code></td><td>پیاده‌رو</td></tr>
+      <tr><td><code>building_01.png</code></td><td>ساختمان</td></tr>
+      <tr><td><code>tree.png</code></td><td>درخت</td></tr>
+      <tr><td><code>water.png</code></td><td>آب</td></tr>
+    </table>
+    <p class="note">اگر اسم فرق داشت، بعداً می‌توانی در کد مسیر را عوض کنی؛ یا فعلاً همان procedural رنگی را استفاده کن.</p>
+
+    <h2>۲) صداهای کوتاه (کلیک، سکه و …)</h2>
+    <ul>
+      <li><a href="https://kenney.nl/assets/interface-sounds" target="_blank" rel="noopener">Kenney Interface Sounds</a></li>
+      <li><a href="https://kenney.nl/assets/rpg-audio" target="_blank" rel="noopener">Kenney RPG Audio</a></li>
+    </ul>
+    <p>فایل‌های صوتی را اینجا آپلود کن:</p>
+    <p><code>public/audio/sfx/</code></p>
+    <p>اسم‌های مفید:</p>
+    <p>
+      <code>click.ogg</code> ·
+      <code>confirm.ogg</code> ·
+      <code>error.ogg</code> ·
+      <code>success.ogg</code> ·
+      <code>coin.ogg</code>
+    </p>
+    <p class="note">فرمت mp3 یا wav هم اغلب کار می‌کند.</p>
+
+    <h2>۳) موسیقی پس‌زمینه</h2>
+    <ul>
+      <li><a href="https://opengameart.org" target="_blank" rel="noopener">OpenGameArt</a> → جستجو کن: town music یا city loop</li>
+    </ul>
+    <p>بگذار در:</p>
+    <p><code>public/audio/music/</code></p>
+    <p>مثلاً: <code>city_theme.ogg</code> و <code>work_theme.ogg</code></p>
+
+    <h2>۴) ترتیب کار در GitHub</h2>
+    <ol>
+      <li>فایل را از سایت رایگان دانلود کن.</li>
+      <li>زیپ را روی ویندوز Extract کن.</li>
+      <li>در مخزن GitHub بازی، برو داخل پوشه مناسب (<code>public/...</code>).</li>
+      <li>Upload files و فایل‌ها را بکش داخل صفحه.</li>
+      <li>Commit کن.</li>
+      <li>اگر با Cloudflare یا Vercel منتشر کرده‌ای، یک بار دوباره Deploy می‌شود و ظاهر/صدا به‌روز می‌شود.</li>
+    </ol>
+
+    <div class="box">
+      <strong>یادت باشد:</strong> تا وقتی این فایل‌ها را نگذاری، بازی خاموش نمی‌شود؛ فقط نقشه ساده‌تر و بدون صدا است.
+    </div>
+  </div>
+</body>
+</html>

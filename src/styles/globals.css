@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700&display=swap');
+
+body {
+  background: #030712;
+  color: #e2e8f0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+.font-display { font-family: 'Orbitron', sans-serif; }
+
+.glass {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+.glass-strong {
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(34, 211, 238, 0.1);
+}
+
+.scene-street { background: linear-gradient(180deg, #1a3a2a, #0d2818); }
+.scene-road { background: linear-gradient(180deg, #1a1a2e, #0f3460); }
+.scene-construction { background: linear-gradient(180deg, #3d2b1f, #2a1f15); }
+.scene-cafe { background: linear-gradient(180deg, #2d1810, #1a0f0a); }
+.scene-garage { background: linear-gradient(180deg, #1a1f2e, #0f1219); }
+.scene-kitchen { background: linear-gradient(180deg, #2a1510, #1a0c08); }
+.scene-market { background: linear-gradient(180deg, #1e1a14, #12100c); }
+.scene-office { background: linear-gradient(180deg, #0d1117, #010409); }
+.scene-shop { background: linear-gradient(180deg, #1a2332, #0f1620); }
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slide-up 0.35s ease-out; }
+
+.safe-bottom { padding-bottom: max(16px, env(safe-area-inset-bottom)); }

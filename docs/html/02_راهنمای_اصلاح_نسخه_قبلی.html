@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>اصلاح نسخه قبلی – Forge City</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+      line-height: 1.9;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+    h1 {
+      font-size: 1.5rem;
+      color: #22d3ee;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      color: #fbbf24;
+      margin-top: 32px;
+    }
+    p, li { color: #cbd5e1; margin: 8px 0; }
+    ol, ul { padding-right: 22px; }
+    .box {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+    .box.green { border-color: #166534; background: #14532d33; }
+    .box.yellow { border-color: #a16207; background: #713f1233; }
+    .step-num {
+      display: inline-block;
+      background: #0891b2;
+      color: #fff;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: bold;
+      margin-left: 8px;
+      font-size: 0.9rem;
+    }
+    a { color: #38bdf8; }
+    code {
+      background: #334155;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      direction: ltr;
+      display: inline-block;
+    }
+    .note { color: #94a3b8; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>راهنمای اصلاح روی نسخه قبلی</h1>
+    <p class="note">اگر قبلاً یک نسخه از Forge City داشتی و می‌خواهی به نسخه جدید برسی، این صفحه برای توست. باز هم بدون نصب برنامه روی لپ‌تاپ.</p>
+
+    <div class="box yellow">
+      <strong>نکته مهم:</strong><br />
+      نسخه ۲ بازی از نو حول «ساخت کاراکتر» ساخته شده. با نسخه‌های خیلی قدیمی (۱.x) یکی نیست.
+      ساده‌ترین راه این است که فایل نسخه جدید را جایگزین کنی و کاراکتر تازه بسازی.
+    </div>
+
+    <h2><span class="step-num">۱</span> از نسخه جدید استفاده کن</h2>
+    <ol>
+      <li>فایل زیپ <code>Forge_City_v2.1_Complete.zip</code> را باز کن (در همان ویندوز با دابل‌کلیک یا Extract).</li>
+      <li>پوشه <code>v2.1</code> را بردار.</li>
+      <li>اگر قبلاً روی GitHub پروژه داشتی:
+        <ul>
+          <li>فایل‌های قدیمی داخل مخزن را پاک کن (یا مخزن جدید بساز).</li>
+          <li>محتوای پوشه <code>v2.1</code> را آپلود کن.</li>
+        </ul>
+      </li>
+      <li>اگر اول کار هستی: همان «راهنمای از صفر» را برو؛ آنجا با GitHub و StackBlitz توضیح داده شده.</li>
+    </ol>
+
+    <h2><span class="step-num">۲</span> اگر فقط می‌خواهی مینی‌گیم‌ها را نگه داری</h2>
+    <p>فایل مینی‌گیم‌ها اینجاست:</p>
+    <p><code>src/components/jobs/RealisticJobs.tsx</code></p>
+    <p>اگر خودت چیزی داخلش عوض کرده بودی، همان فایل را از نسخه قدیم بردار و روی نسخه جدید کپی کن (از طریق آپلود در GitHub).</p>
+
+    <h2><span class="step-num">۳</span> داده‌های بازیکن قبلی</h2>
+    <p>امتیاز و کردیت نسخه قدیم معمولاً در حافظه مرورگر (localStorage) است و به نسخه ۲ منتقل نمی‌شود.</p>
+    <div class="box">
+      یعنی بازیکن‌ها یک بار کاراکتر جدید می‌سازند و از صفر شروع می‌کنند.
+      این برای یک بازی تازه‌کار طبیعی است.
+    </div>
+
+    <h2><span class="step-num">۴</span> از نسخه ۲.۰ به ۲.۱</h2>
+    <p>اگر همین نسخه ۲ را داشتی و فقط آپدیت ۲.۱ را می‌گیری:</p>
+    <ul>
+      <li>پوشه‌های جدید مربوط به صدا و تایل‌مپ را اضافه کن.</li>
+      <li>یا ساده‌تر: کل پوشه <code>v2.1</code> را جایگزین کن.</li>
+    </ul>
+    <p>کاراکتر ذخیره‌شده معمولاً می‌ماند (همان کلید مرورگر).</p>
+
+    <h2><span class="step-num">۵</span> چک کن که درست شده</h2>
+    <ol>
+      <li>در StackBlitz یا لینک منتشرشده، صفحه ساخت کاراکتر بیاید.</li>
+      <li>کاراکتر ساخته شود و روی نقشه دیده شود.</li>
+      <li>منطقه عوض شود و شغل شروع شود.</li>
+    </ol>
+
+    <div class="box green">
+      اگر گیج شدی، همان مسیر «از صفر» را برو با فایل v2.1.
+      وقت کمتری می‌گیرد تا وصله‌کاری نسخه قدیمی.
+    </div>
+  </div>
+</body>
+</html>

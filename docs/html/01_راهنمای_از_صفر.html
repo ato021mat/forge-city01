@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>راهنمای از صفر – Forge City</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+      line-height: 1.9;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+    h1 {
+      font-size: 1.5rem;
+      color: #22d3ee;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 12px;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      color: #fbbf24;
+      margin-top: 36px;
+      margin-bottom: 10px;
+    }
+    h3 { font-size: 1rem; color: #a5b4fc; margin-top: 20px; }
+    p { margin: 10px 0; color: #cbd5e1; }
+    ol, ul { padding-right: 22px; margin: 10px 0; }
+    li { margin: 8px 0; color: #cbd5e1; }
+    .box {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+    .box.green { border-color: #166534; background: #14532d33; }
+    .box.blue { border-color: #1e40af; background: #1e3a5f33; }
+    .step-num {
+      display: inline-block;
+      background: #0891b2;
+      color: #fff;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: bold;
+      margin-left: 8px;
+      font-size: 0.9rem;
+    }
+    a { color: #38bdf8; }
+    a:hover { color: #7dd3fc; }
+    code {
+      background: #334155;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      direction: ltr;
+      display: inline-block;
+    }
+    .note { color: #94a3b8; font-size: 0.95rem; }
+    .warn { color: #fbbf24; }
+    hr { border: none; border-top: 1px solid #334155; margin: 32px 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>راهنمای از صفر – بازی Forge City</h1>
+    <p class="note">این راهنما برای کسی نوشته شده که می‌خواهد بدون نصب هیچ برنامه‌ای روی لپ‌تاپ، بازی را راه بیندازد.</p>
+
+    <div class="box green">
+      <strong>خلاصه خیلی کوتاه:</strong><br />
+      فایل بازی را در سایت StackBlitz باز می‌کنی → بازی در همان مرورگر اجرا می‌شود → بعداً رایگان منتشرش می‌کنی.
+    </div>
+
+    <h2><span class="step-num">۱</span> فایل بازی را داشته باش</h2>
+    <p>فایل زیپ بازی را که دریافت کرده‌ای نگه دار. اسمش چیزی شبیه این است:</p>
+    <p><code>Forge_City_v2.1_Complete.zip</code></p>
+    <p>داخلش پوشه‌ای به اسم <code>v2.1</code> هست. همان پوشه اصل بازی است.</p>
+
+    <h2><span class="step-num">۲</span> بازی را آنلاین اجرا کن (بدون نصب)</h2>
+    <p>از سایت <strong>StackBlitz</strong> استفاده می‌کنیم. رایگان است و نیازی به نصب ندارد.</p>
+
+    <h3>روش آسان:</h3>
+    <ol>
+      <li>به این آدرس برو: <a href="https://stackblitz.com" target="_blank" rel="noopener">https://stackblitz.com</a></li>
+      <li>اگر خواستی حساب رایگان بساز (با گوگل هم می‌شود). بعضی کارها بدون حساب هم ممکن است.</li>
+      <li>روی <strong>Open Web Container</strong> یا ساخت پروژه جدید برو.</li>
+      <li>بهترین حالت: یک بار پروژه را در <strong>GitHub</strong> رایگان آپلود کن، بعد در StackBlitz با «Import from GitHub» باز کن.</li>
+    </ol>
+
+    <div class="box blue">
+      <strong>روش ساده‌تر با GitHub (پیشنهادی):</strong>
+      <ol>
+        <li>برو به <a href="https://github.com" target="_blank" rel="noopener">github.com</a> و یک حساب رایگان بساز.</li>
+        <li>روی <strong>New repository</strong> بزن. یک اسم بگذار مثلاً <code>forge-city</code>.</li>
+        <li>فایل‌های داخل پوشه <code>v2.1</code> را در همان مخزن آپلود کن (دکمه Add file → Upload files).</li>
+        <li>بعد برو به: <a href="https://stackblitz.com/github" target="_blank" rel="noopener">stackblitz.com/github</a></li>
+        <li>آدرس مخزن گیت‌هاب خودت را بده تا پروژه باز شود.</li>
+        <li>صبر کن تا نصب تمام شود. بعد بازی در همان صفحه اجرا می‌شود.</li>
+      </ol>
+    </div>
+
+    <p class="note">اگر StackBlitz خطا داد، از <a href="https://codesandbox.io" target="_blank" rel="noopener">CodeSandbox</a> هم می‌شود همین کار را کرد: Import from GitHub.</p>
+
+    <h2><span class="step-num">۳</span> بازی را بازی کن</h2>
+    <ol>
+      <li>اول صفحه «ساخت کاراکتر» می‌آید.</li>
+      <li>ظاهر کاراکتر را عوض کن (مو، لباس، رنگ و …).</li>
+      <li>یک اسم بگذار و وارد شهر شو.</li>
+      <li>روی نقشه، منطقه را انتخاب کن.</li>
+      <li>از تب «کارها» یک شغل را شروع کن و مینی‌گیم را انجام بده.</li>
+    </ol>
+
+    <h2><span class="step-num">۴</span> بازی را رایگان منتشر کن (تا دیگران هم باز کنند)</h2>
+    <p>وقتی روی GitHub باشد، می‌توانی با <strong>Cloudflare Pages</strong> یا <strong>Vercel</strong> رایگان منتشرش کنی.</p>
+
+    <h3>با Cloudflare Pages (رایگان):</h3>
+    <ol>
+      <li>برو به <a href="https://pages.cloudflare.com" target="_blank" rel="noopener">pages.cloudflare.com</a></li>
+      <li>حساب رایگان بساز.</li>
+      <li>Connect to Git → مخزن GitHub خودت را انتخاب کن.</li>
+      <li>تنظیمات ساخت:
+        <ul>
+          <li>Framework: Next.js</li>
+          <li>Build command: <code>npm run build</code></li>
+          <li>Output: معمولاً خودکار تشخیص داده می‌شود</li>
+        </ul>
+      </li>
+      <li>Save and Deploy. چند دقیقه صبر کن تا لینک عمومی بدهد.</li>
+    </ol>
+
+    <p class="note">دامنه <code>.ir</code> خودت را بعداً وقتی درآمد داشتی می‌توانی وصل کنی. اول لینک رایگان کافی است.</p>
+
+    <h2><span class="step-num">۵</span> اسپرایت و صدا (اختیاری ولی قشنگ‌تر می‌کند)</h2>
+    <p>بازی بدون این‌ها هم کار می‌کند. اگر خواستی ظاهر و صدا بهتر شود، فایل راهنمای «دانلود دارایی‌ها» را بخوان.</p>
+    <p>دانلود از سایت‌های رایگان است؛ بعد فایل‌ها را در GitHub داخل پوشه‌های <code>public/sprites</code> و <code>public/audio</code> آپلود می‌کنی.</p>
+
+    <hr />
+    <h2>اگر گیر کردی</h2>
+    <ul>
+      <li>صفحه سفید بود → چند ثانیه صبر کن یا یک بار Refresh بزن.</li>
+      <li>StackBlitz بالا نیامد → با موبایل داده کمتر است؛ از لپ‌تاپ و وای‌فای بهتر امتحان کن.</li>
+      <li>کاراکتر ذخیره نشد → در همان مرورگر بمان؛ داده‌ها روی همان دستگاه ذخیره می‌شوند.</li>
+    </ul>
+
+    <div class="box">
+      <strong>یادت باشد:</strong> هیچ برنامه‌ای روی لپ‌تاپ لازم نیست. فقط مرورگر + حساب رایگان GitHub و StackBlitz/Cloudflare.
+    </div>
+  </div>
+</body>
+</html>
